@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url('../images/shiok/koufukuron.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 25%;
+    font-family: sans-serif;
+}
+
+#main {
+    padding: 20px;
+    text-align: center;
+
+    color: #37b484;
+    text-shadow: 3px 3px 1px #000;
+
+    font-size: 2.5em;
+
+    padding-top: 40px;
+}
+
+#shiok-1 {
+    position: absolute;
+    width: 40%;
+    height: auto;
+
+    bottom: 0;
+    left: -80px;
+}
+
+#shiok-2 {
+    position: absolute;
+    width: 40%;
+    height: auto;
+
+    bottom: 0;
+    right: 0;
+}
+
+#shiok-3 {
+    position: absolute;
+    width: 40%;
+    height: auto;
+
+    bottom: 0;
+    right: 180px;
+}
+
+#shiok-4 {
+    position: absolute;
+    width: 40%;
+    height: auto;
+
+    bottom: 0;
+    left: 120px;
+}
+
+#shiok-5 {
+    position: absolute;
+    width: 40%;
+    height: auto;
+
+    bottom: 0;
+    left: 0;
+}
