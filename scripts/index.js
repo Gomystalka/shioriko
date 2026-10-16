@@ -55,6 +55,9 @@ window.formatString = function(str, ...opt) {
 const BACKGROUND_ELEMENT = document.getElementById('background-primary');
 const SECONDARY_BACKGROUND_ELEMENT = document.getElementById('background-hidden');
 const MAIN_CONTAINER_ELEMENT = document.getElementById('flyer-container');
+if(MAIN_CONTAINER_ELEMENT)
+    MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim'); //Remove the animation class on page load to avoid the animation being played on page load.
+
 const BACKGROUND_COUNT = 49;
 const BACKGROUND_PATH = "/images/Backgrounds/";
 const TIME_TILL_REDIRECT_MILLIS = 200;
