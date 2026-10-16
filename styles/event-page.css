@@ -1,0 +1,235 @@
+.event-title {
+  /*Scaling and Positioning*/
+  width: 80%;
+  height: auto;
+
+  /*Styling*/
+  margin-top: 16px;
+  margin-bottom: 8px;
+  opacity: 90%;
+
+
+  transition: transform 0.1s linear;
+  transition: all 0.2s ease;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#main-container {
+  visibility: visible;
+  transition: margin-right 0.2s linear, visibility 0.2s linear; 
+}
+
+.event-title:hover {
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+.event-title:active {
+  transition: transform 0.05s linear;
+  -o-transition: transform 0.05s linear;
+  -moz-transition: transform 0.05s linear;
+  -webkit-transition: transform 0.05s linear;
+  transform: scale(0.95, 0.95);
+}
+
+#description-header {
+  font-size: 0.9rem !important;
+  text-wrap-mode: nowrap;
+
+  transition: all 0.4s ease;
+
+  animation: pulse 2s ease-in-out 0s infinite alternate; 
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+
+/* Flyer */
+#flyer-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 2480 / 2487; /*Exact image dimensions.*/
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+
+  container-type: inline-size;
+}
+
+#flyer-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  display: block;
+
+  /* Styling */
+  border-radius: 10px;
+  box-shadow: 
+    0 0 20px 5px rgba(141, 40, 96, 0.9),
+    0 0 50px 10px rgba(141, 40, 96, 0.4);
+}
+
+.flyer-component {
+  position: absolute;
+  z-index: 10;
+}
+
+.flyer-list-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.flyer-list-items li {
+    font-size: clamp(10px, 3.5vw, 27px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 3.3cqw;
+}
+
+.flyer-list-items .final-list-item {
+    font-size: clamp(10px, 2.5vw, 20px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 2.3cqw;
+}
+
+.flyer-text-item {
+    text-shadow: none;
+    color: #e1007e;
+    font-style: bold;
+}
+
+#performers-list {
+  top: 12.5%;
+  left: 4%;
+}
+
+#vj-list {
+    left: 4%;
+    top: 53.75%; /*lol*/
+}
+
+#location {
+    text-align: left;
+    left: 3.3%;
+    top: 81%;
+
+    font-size: clamp(10px, 3.5vw, 27px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 5.5cqw;
+
+    line-height: 0.5;
+}
+
+#twipla {
+    width: 35%;
+    right: 6%;
+    top: 75%;
+    opacity: 0.75;
+
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+#twipla:hover {
+    opacity: 1;
+    transform: scale(1.04, 1.04);
+    cursor: pointer;
+}
+
+#twipla:active {
+    opacity: 0.55;
+    transform: scale(0.98, 0.98);
+}
+
+#twipla img {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+}
+
+#rules {
+    text-align: left;
+    right: 28.75%;
+    top: 13.9%;
+}
+
+#rules .flyer-item-sub-header {
+    font-size: clamp(10px, 1.5vw, 10px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 1cqw;
+}
+
+#location .flyer-item-sub-header {
+    font-size: clamp(10px, 2.5vw, 20px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 2.75cqw;
+}
+
+/*Animations*/
+.interactable, #location {
+    transition: text-shadow 0.1s ease, color 0.1s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+.interactable:hover, #location:hover {
+    color: white;
+    text-shadow: 0 0 10px #e1007e, 0 0 20px #e1007e, 0 0 30px #e1007e;
+    cursor: pointer;
+    transition: text-shadow 0.1s ease, color 0.1s ease, transform 0.1s ease;
+    transform: scale(1.04, 1.04);
+}
+
+.interactable:active, #location:active {
+    color: #ff7ac5;
+    transform: scale(0.98, 0.98);
+}
+
+#flyer-container {
+   visibility: visible;
+   right: 0;
+   transition: right 0.3s linear, visibility 0.2s linear; 
+}
+
+.slide-left-anim {
+  right: 120% !important;
+  visibility: hidden !important;
+}
+
+/* Responsive Design */
+
+/*When in landscape mode, scale the page so that the main content page covers only some of the screen; leaving the sides untouched.*/
+@media screen and (orientation: landscape) {
+  .event-title {
+    display: block;
+    width: 60%;
+    max-width: 700px;
+  }
+
+  #description-header {
+    font-size: 1.2rem !important;
+  }
+}
+
+/*When in portrait mode, scale the page so that the main content page covers majority of the screen.*/
+@media screen and (orientation: portrait) {
+  .event-title {
+    max-width: 550px;
+  }
+
+  #description-header {
+    font-size: 0.6rem !important;
+  }
+}

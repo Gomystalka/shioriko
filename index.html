@@ -1,45 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta http-equiv="refresh" content="2">-->
+  <title>ShioShioppiのウェブサイト</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="description" content="自分のウェブサイトです。ようこそ～">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://www.nijigasaki.com/images/shiok/ka.jpg">
-    <meta property="og:url" content="https://www.nijigasaki.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="三船栞子さん、お誕生日おめでとうございます！！！">
-    <meta property="og:description" content="三船栞子さん、お誕生日おめでとうございます！！！">
+  <meta property="og:title" content="Nijigasaki">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <meta name="keywords" content="Love Live!, ラブライブ！, School Idol, スクールアイドル, U's, μ's, Aqours, Nijigasaki, Liella, Hasunosora">
 
-    <title>三船栞子さん、お誕生日おめでとうございます！！！</title>
-
-    <meta
-        name="description"
-        content="三船栞子さん、お誕生日おめでとうございます！！！"
-    >
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#e10b80">
 </head>
 
 <body>
-
-    <header>
-    </header>
-
-    <div id="main">
-        <h2>三船栞子さん、お誕生日おめでとうございます！！！</h2>
-        <h2><a href="https://x.com/hashtag/%E4%B8%89%E8%88%B9%E6%A0%9E%E5%AD%90%E7%94%9F%E8%AA%95%E7%A5%AD2026" target="_blank">#三船栞子誕生祭2026</a></h2>
-        <img src="images/shiok/13.png" alt="三船栞子" id='shiok-1'>
-        <img src="images/shiok/18.png" alt="三船栞子" id='shiok-2'>
-        <img src="images/shiok/2.png" alt="三船栞子" id='shiok-3'>
-        <img src="images/shiok/11.png" alt="三船栞子" id='shiok-4'>
-        <img src="images/shiok/15.png" alt="三船栞子" id='shiok-5'>
-    </div>
-
-    <!--
-    <footer>
-        <p>&copy; 2026 三船栞子ドキドキスキスキクラブ</p>
-    </footer>
--->
+  <div id="nav-bar" class="config-panel">
+	  <div id="config" onclick="toggleSettings(this)"></div>
+	  <h2 data-loc-key="options.label" class="llfont">Settings</h2>
+  </div>
+  <!--Literally only used as a background so that opacity works correctly.-->
+  <div id='background-primary' style="display: block"></div>
+  <div id='background-hidden' style="display: none"></div>
+  <div id="loading-text" class="llfont" style="display: block">準備中 (WIP)</div>
+	<footer>
+		<span class="llfont">&copy; 2025 ShioShioppi (SHIO-P)</span>
+	</footer>
+  </div>
+	<script src="scripts/index.js"></script>
 </body>
+
 </html>
