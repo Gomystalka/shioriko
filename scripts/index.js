@@ -1,3 +1,12 @@
+const MAIN_CONTAINER_ELEMENT = document.getElementById('flyer-container');
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    MAIN_CONTAINER_ELEMENT.style.display = 'block';
+    MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim');
+  }
+});
+
 const MAIN_SCRIPT_RESOURCE_IDENTITY = "Main";
 const ResourceType = {
     image: [
@@ -54,9 +63,6 @@ window.formatString = function(str, ...opt) {
 }
 const BACKGROUND_ELEMENT = document.getElementById('background-primary');
 const SECONDARY_BACKGROUND_ELEMENT = document.getElementById('background-hidden');
-const MAIN_CONTAINER_ELEMENT = document.getElementById('flyer-container');
-if(MAIN_CONTAINER_ELEMENT)
-    MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim'); //Remove the animation class on page load to avoid the animation being played on page load.
 
 const BACKGROUND_COUNT = 49;
 const BACKGROUND_PATH = "/images/Backgrounds/";
@@ -214,9 +220,9 @@ function animateBackground(timestamp) {
 
 function onTransitionEnd(event) {
     //Handle proper hiding of main-menu buttons.
-    if(event.propertyName === "visibility" && event.target === BUTTON_LIST_ELEMENT) {
+    if(event.propertyName === "visibility" && event.target === MAIN_CONTAINER_ELEMENT) {
         //When the transition ends, this means the buttons have disappeared from the screen. If this happens, set display to none.
-        BUTTON_LIST_ELEMENT.style.display = 'none';
+        MAIN_CONTAINER_ELEMENT.style.display = 'none';
     }
 }
 
