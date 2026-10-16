@@ -1,11 +1,19 @@
 const MAIN_CONTAINER_ELEMENT = document.getElementById('flyer-container');
 
+/*
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     MAIN_CONTAINER_ELEMENT.style.display = 'block';
     MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim');
   }
 });
+*/
+window.onpageshow = function(event) {
+    if(event.persisted) {
+        MAIN_CONTAINER_ELEMENT.style.display = 'block';
+        MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim');
+    }
+};
 
 const MAIN_SCRIPT_RESOURCE_IDENTITY = "Main";
 const ResourceType = {
