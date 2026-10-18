@@ -170,7 +170,7 @@ footer {
 
     font-size: clamp(10px, 2.5vw, 20px);
     /*If this is not supported, upper styling will be used instead. Works almost as good.*/
-
+    font-size: 2.5cqw;
 
     line-height: 1;
 }
@@ -240,11 +240,5 @@ footer {
 
   #description-header {
     font-size: 0.6rem !important;
-  }
-}
-
-@media screen and (orientation: portrait) and (min-width: 1200px) {
-    #rules {
-    font-size: 1.6vw;
   }
 }
