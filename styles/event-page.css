@@ -165,8 +165,14 @@ footer {
 
 #rules {
     text-align: left;
-    right: 28.75%;
-    top: 13.9%;
+    right: 27.45%;
+    top: 13.8%;
+
+    font-size: clamp(10px, 2.5vw, 20px);
+    /*If this is not supported, upper styling will be used instead. Works almost as good.*/
+    font-size: 2.5cqw;
+
+    line-height: 1;
 }
 
 #rules .flyer-item-sub-header {

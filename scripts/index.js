@@ -92,29 +92,35 @@ function setHiddenBackgroundByIndex(index) {
     currentHiddenBackgroundElement.style.backgroundImage = `url('${BACKGROUND_PATH}${index}.jpg')`;
 }
 
-function goToPage(element) { //Used by the banner and buttons to avoid using an 'a' tag.
+function goToPage(element, openInNewTab) { //Used by the banner and buttons to avoid using an 'a' tag.
     let src = element.getAttribute('data-target');
     let isXHandle = element.hasAttribute('data-x');
     if(isXHandle)
         src = kXProfileURL + src;
 
     const isHome = src === "#";
-    if(isHome) { //Home
-        if(MAIN_CONTAINER_ELEMENT) { //This doesn't exist on all pages.
-            MAIN_CONTAINER_ELEMENT.style.display = 'block'; //The original display mode of the button list is flex.
-            MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim');
+
+    if(!openInNewTab) {
+        if(isHome) { //Home
+            if(MAIN_CONTAINER_ELEMENT) { //This doesn't exist on all pages.
+                MAIN_CONTAINER_ELEMENT.style.display = 'block'; //The original display mode of the button list is flex.
+                MAIN_CONTAINER_ELEMENT.classList.remove('slide-left-anim');
+            }
         }
-    }
-    else {
-        if(MAIN_CONTAINER_ELEMENT)
-            MAIN_CONTAINER_ELEMENT.classList.add('slide-left-anim');
+        else {
+            if(MAIN_CONTAINER_ELEMENT)
+                MAIN_CONTAINER_ELEMENT.classList.add('slide-left-anim');
+        }
     }
 
     setTimeout(() => {
         if(!isHome && !isExternalLink(src)) //Append query params if any, but only if the link is not external.
             src += window.location.search || "";
-        window.location.href = src;
-    }, TIME_TILL_REDIRECT_MILLIS);
+        if(!openInNewTab)
+            window.location.href = src;
+        else
+            window.open(src, '_blank').focus(); //Open in new tab.
+    }, openInNewTab ? 0 : TIME_TILL_REDIRECT_MILLIS);
 }
 
 function removeAllDataDebug() {

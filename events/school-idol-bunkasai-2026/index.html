@@ -11,12 +11,18 @@
   <link rel="stylesheet" href="styles/event-page.css">
   <meta name="description" content="Heart To Heart - スクールアイドル文化祭2026の公式ウェブサイト">
 
-  <meta property="og:title" content="Nijigasaki">
+  <meta property="og:title" content="Heart to Heart - スクールアイドル文化祭２０２６公式サイト">
+  <meta property="og:description" content="
+  初めての日本人ｘ外国人ラブライバー交流イベントHeart to Heart - スクールアイドル文化祭２０２６公式サイト
+  First Japanese x Foreigner Love Liver DJ Event Heart to Heart - School Idol Cultural Festival 2026 Official Website
+  " />
   <meta property="og:url" content="https://nijigasaki.com/events/school-idol-bunkasai-2026">
   <meta property="og:image" content="https://nijigasaki.com/images/Sprites/flyer-title.png">
   <meta property="og:image:alt" content="Heart To Heart - スクールアイドル文化祭2026">
   <meta name="keywords" content="Love Live!, ラブライブ！, School Idol, スクールアイドル, Shioriko Mifune, 三船栞子, twipla, ツイプラ, 秋葉原雷神,ラブライバー,Love Liver,ラブライブ！DJ">
-
+  <meta name="theme-color" content="#37b484" />
+  <meta property="og:locale" content="ja_JP" />
+  
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#e10b80">
@@ -35,16 +41,16 @@
   <div id='background-hidden' style="display: none"></div>
 
   <div id='main-container'>
-    <img class="event-title" src="images/Sprites/flyer-title.png" data-target="/events/school-idol-bunkasai-2026" onclick="goToPage(this)"/>
+    <img class="event-title" src="images/Sprites/flyer-title.png" data-target="/events/school-idol-bunkasai-2026" onclick="goToPage(this)" draggable="false"/>
 
     <div id="flyer-container">
-      <img class="event-flyer" src="images/Sprites/flyer-web-clean.png"/>
+      <img class="event-flyer" src="images/Sprites/flyer-web-clean-ssm.png" draggable="false"/>
       <div class="flyer-component" id="performers-list">
         <ul class="flyer-list-items">
-          <li class="llfont flyer-text-item interactable" data-x data-target="mezy2_" onclick="goToPage(this)">mezy</li>
-          <li class="llfont flyer-text-item interactable" data-x data-target="ShioShioppi" onclick="goToPage(this)">SHIO-P</li>
-          <li class="llfont flyer-text-item interactable" data-x data-target="seirent_127" onclick="goToPage(this)">みのり</li>
-          <li class="llfont flyer-text-item interactable" data-x data-target="Atsushio" onclick="goToPage(this)">アツシオハラ</li>
+          <li class="llfont flyer-text-item interactable" data-x data-target="mezy2_">mezy</li>
+          <li class="llfont flyer-text-item interactable" data-x data-target="ShioShioppi">SHIO-P</li>
+          <li class="llfont flyer-text-item interactable" data-x data-target="seirent_127">みのり</li>
+          <li class="llfont flyer-text-item interactable" data-x data-target="Atsushio">アツシオハラ</li>
           <li class="llfont flyer-text-item final-list-item">AND MORE...</li>
         </ul>
       </div>
@@ -54,7 +60,7 @@
         </ul>
       </div>
       <div class="flyer-component" id="location">
-        <span class="llfont flyer-text-item interactable" data-target="https://maps.app.goo.gl/Bzxm1VtHLds4MbAK9" onclick="goToPage(this)">
+        <span class="llfont flyer-text-item interactable" data-target="https://maps.app.goo.gl/Bzxm1VtHLds4MbAK9" draggable="false">
           <span>秋葉原雷神2F</span>
           <br>
           <span class="flyer-item-sub-header">Anison DJ Cafe Bar RAIJIN 2F</span>
@@ -67,12 +73,13 @@
           <span class="flyer-item-sub-header">&nbsp;TBA</span>
         </span>
       </div>
-      <div class="flyer-component" class="interactable" id="twipla" data-target="https://twipla.jp/events/747293" onclick="goToPage(this)">
-          <img src="images/Sprites/twipla-revamp.png">
+      <div class="flyer-component interactable" id="twipla" data-target="https://twipla.jp/events/747293" data-child>
+          <img src="images/Sprites/twipla-revamp.png" draggable="false">
       </div>
     </div>
   </div>
 	<script src="scripts/index.js"></script>
+  <script src="scripts/event-page.js"></script>
 </body>
 
 </html>
