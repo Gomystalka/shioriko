@@ -117,12 +117,12 @@ footer {
 
 #performers-list {
   top: 12.5%;
-  left: 4%;
+  left: 3.7%;
 }
 
 #vj-list {
-    left: 4%;
-    top: 53.75%; /*lol*/
+    left: 3.7%;
+    top: 57.4%; /*lol*/
 }
 
 #location {
@@ -164,8 +164,9 @@ footer {
 }
 
 #rules {
+    position: absolute;
     text-align: left;
-    right: 27.45%;
+    right: 3.94%;
     top: 13.8%;
 
     font-size: clamp(10px, 2.5vw, 20px);
@@ -176,9 +177,13 @@ footer {
 }
 
 #rules .flyer-item-sub-header {
+
+    top: 115%;
+    position: absolute;
     font-size: clamp(10px, 1.5vw, 10px);
     /*If this is not supported, upper styling will be used instead. Works almost as good.*/
     font-size: 1cqw;
+    line-height: 1.8;
 }
 
 #location .flyer-item-sub-header {
